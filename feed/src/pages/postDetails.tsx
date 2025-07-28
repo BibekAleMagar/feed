@@ -89,6 +89,7 @@ export const PostDetail = () => {
   title="Delete Post?"
   confirmText="Delete"
   cancelText="Cancel"
+  description= "This will delete the current post"
 />
 
     </>

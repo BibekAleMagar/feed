@@ -17,6 +17,7 @@ type ConfirmDialogProps = {
   isLoading?: boolean;
   confirmText?: string;
   cancelText?: string;
+  description?: string
 };
 
 export const ConfirmDialog = ({
@@ -27,6 +28,7 @@ export const ConfirmDialog = ({
   isLoading = false,
   confirmText = "Yes",
   cancelText = "Cancel",
+  description
 }: ConfirmDialogProps) => {
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
@@ -35,7 +37,7 @@ export const ConfirmDialog = ({
           <DialogTitle className="text-xl md:text-2xl">{title}</DialogTitle>
         </DialogHeader>
         <DialogDescription className="text-lg md:text-xl">
-          This will delete the <span className="font-bold text-black">current post</span>
+          {description}
         </DialogDescription>
         <DialogFooter>
           <Button

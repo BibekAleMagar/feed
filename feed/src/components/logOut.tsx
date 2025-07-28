@@ -1,7 +1,6 @@
 import { useNavigate } from "react-router-dom"
 import { Button } from "./ui/button"
 import { LogOutIcon } from "lucide-react"
-import { useState } from "react"
 import {
   AlertDialog,
   AlertDialogAction,
@@ -26,14 +25,14 @@ export const LogOut = () => {
   <AlertDialogTrigger><Button className="cursor-pointer">Logo Out <LogOutIcon /></Button></AlertDialogTrigger>
   <AlertDialogContent>
     <AlertDialogHeader>
-      <AlertDialogTitle>Are you sure you want to logout?</AlertDialogTitle>
-      <AlertDialogDescription>
+      <AlertDialogTitle className="text-xl md:text-2xl">Are you sure you want to logout?</AlertDialogTitle>
+      <AlertDialogDescription className="text-lg md:text-xl">
         This action will you log you out from the page
       </AlertDialogDescription>
     </AlertDialogHeader>
     <AlertDialogFooter>
-      <AlertDialogCancel >Cancel</AlertDialogCancel>
-      <AlertDialogAction className="bg-black text-white" onClick={handleLogOut}>Continue</AlertDialogAction>
+      <AlertDialogCancel className="cursor-pointer text-lg md:text-xl">Cancel</AlertDialogCancel>
+      <AlertDialogAction className="bg-black text-white cursor-pointer text-lg md:text-xl" onClick={handleLogOut}>Continue</AlertDialogAction>
     </AlertDialogFooter>
   </AlertDialogContent>
 </AlertDialog>
